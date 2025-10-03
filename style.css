@@ -188,11 +188,11 @@ body {
         position: fixed;
         top: 70px;
         right: -100%;
-        width: 100%;  /* ← FULL WIDTH */
+        width: 280px;
         height: calc(100vh - 70px);
         background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-brown) 100%);
         flex-direction: column;
-        padding: 4rem 0;
+        padding: 2rem 0;
         gap: 0;
         box-shadow: -5px 0 20px rgba(0,0,0,0.3);
         transition: right 0.4s ease;
@@ -212,22 +212,22 @@ body {
     
     .nav-link {
         display: block;
-        padding: 2.5rem 2rem;  /* ← MUCH MORE SPACE */
-        font-size: 1.8rem;  /* ← MUCH BIGGER TEXT */
+        padding: 1.8rem 2rem;
+        font-size: 2.2rem !important;
         width: 100%;
-        color: var(--warm-beige) !important;
-        font-weight: 500;
+        color: var(--warm-beige) !important;  /* ← ADD THIS */
+        font-weight: 600 !important;
         letter-spacing: 2px;
+        font-family: var(--font-title) !important;
     }
     
     .nav-link::after {
         display: none;
     }
     
-    .nav-link:hover,
-    .nav-link:active {
-        background: rgba(197, 165, 114, 0.2);
-        color: var(--gold) !important;
+    .nav-link:hover {
+        background: rgba(197, 165, 114, 0.1);
+        color: var(--gold) !important;  /* ← ADD THIS */
     }
 }
 
@@ -1116,6 +1116,7 @@ body {
 /* ========================================
    RESPONSIVE DESIGN
 ======================================== */
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 4rem;
