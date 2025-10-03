@@ -175,3 +175,41 @@ window.addEventListener('load', function() {
 console.log('%c🎨 GAMABA Heritage Website', 'color: #C5A572; font-size: 20px; font-weight: bold;');
 console.log('%cPreserving Philippine Cultural Heritage', 'color: #800020; font-size: 14px;');
 console.log('%cBuilt with ❤️ for education', 'color: #8B4513; font-size: 12px;');
+
+// ========================================
+// BROCHURE LIGHTBOX
+// ========================================
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    lightboxImg.src = imageSrc;
+    lightbox.style.display = 'flex';
+    
+    // Trigger animation after display is set
+    setTimeout(() => {
+        lightbox.classList.add('active');
+    }, 10);
+    
+    // Prevent body scroll when lightbox is open
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    
+    lightbox.classList.remove('active');
+    
+    // Wait for animation to finish before hiding
+    setTimeout(() => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }, 400);
+}
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
