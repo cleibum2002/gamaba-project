@@ -12,15 +12,15 @@
 }
 
 :root {
-    /* Color Palette */
-    --burgundy: #800020;
-    --gold: #C5A572;
-    --burnt-sienna: #8B4513;
-    --warm-beige: #F5E6D3;
-    --terracotta: #C85A3C;
-    --dark-brown: #3E2723;
-    --cream: #FFF8E7;
-    --bronze: #CD7F32;
+    /* Color Palette - Matching Brochure */
+    --burgundy: #B8210E;        /* Brighter red from brochure */
+    --gold: #FFB627;            /* Vibrant yellow-gold from brochure */
+    --burnt-sienna: #D2691E;    /* Warm orange tone */
+    --warm-beige: #F5DEB3;      /* Wheat/tan color */
+    --terracotta: #E86A33;      /* Orange accent from brochure */
+    --dark-brown: #4A2C1F;      /* Rich brown for text */
+    --cream: #FFF8E7;           /* Soft cream background */
+    --bronze: #CD7F32;          /* Metallic accent */
     
     /* Typography */
     --font-title: 'Cinzel', serif;
@@ -279,7 +279,9 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(135deg, var(--burgundy) 0%, var(--burnt-sienna) 50%, var(--terracotta) 100%);
+    background: 
+        linear-gradient(135deg, rgba(184, 33, 14, 0.85) 0%, rgba(232, 106, 51, 0.85) 100%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a01810' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     overflow: hidden;
 }
 
