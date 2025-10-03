@@ -186,17 +186,31 @@
         </div>
     </section>
 
-    <!-- E-Brochure Section -->
-    <section class="brochure-section">
+    <!-- Digital Brochure Display Section -->
+    <section class="brochure-display-section">
         <div class="container">
-            <div class="brochure-card scroll-reveal">
-                <h3>Digital E-Brochure</h3>
-                <p>Explore our comprehensive guide to GAMABA awardees and Philippine cultural heritage</p>
-                <button class="brochure-btn">View E-Brochure</button>
-                <small>Link or embed your digital brochure here</small>
+            <div class="section-header">
+                <h2 class="section-title scroll-reveal">Digital Brochure</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle scroll-reveal">Explore Our GAMABA Heritage Guide</p>
+            </div>
+            
+            <div class="brochure-pages">
+                <div class="brochure-page scroll-reveal" onclick="openLightbox('brochure-1.png')">
+                    <img src="brochure-1.png" alt="GAMABA Brochure Page 1" class="brochure-image">
+                </div>
+                <div class="brochure-page scroll-reveal delay-1" onclick="openLightbox('brochure-2.png')">
+                    <img src="brochure-2.png" alt="GAMABA Brochure Page 2" class="brochure-image">
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Brochure">
+    </div>
 
     <!-- Reflections Section -->
     <section id="reflections" class="reflections-section">
@@ -222,122 +236,226 @@
         </div>
     </section>
 
-        <!-- Our Team Section -->
-    <section id="team" class="team-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title scroll-reveal">Our Team</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle scroll-reveal">Senior High School Students - Digital Portfolio Project</p>
-            </div>
+<!-- Our Team Section -->
+<section id="team" class="team-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title scroll-reveal">Our Team</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle scroll-reveal">Senior High School Students - Digital Portfolio Project</p>
+        </div>
 
-            <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-card scroll-reveal">
-                    <div class="team-image-wrapper">
-                        <div class="team-image">
-                            <img src="member1.jpg" alt="Team Member 1">
-                            <div class="team-overlay">
-                                <p class="team-quote">"Preserving culture through digital storytelling"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-name">Your Name Here</h3>
-                        <p class="team-role">Project Leader / Researcher</p>
-                        <p class="team-school">Your School Name</p>
-                        <div class="team-contributions">
-                            <span class="contribution-tag">Research</span>
-                            <span class="contribution-tag">Content Writing</span>
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card scroll-reveal">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member1.jpg" alt="Team Member 1">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Preserving culture through digital storytelling"</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Team Member 2 -->
-                <div class="team-card scroll-reveal delay-1">
-                    <div class="team-image-wrapper">
-                        <div class="team-image">
-                            <img src="member2.jpg" alt="Team Member 2">
-                            <div class="team-overlay">
-                                <p class="team-quote">"Connecting heritage with technology"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-name">Team Member 2</h3>
-                        <p class="team-role">Web Designer / Developer</p>
-                        <p class="team-school">Your School Name</p>
-                        <div class="team-contributions">
-                            <span class="contribution-tag">Web Design</span>
-                            <span class="contribution-tag">Coding</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card scroll-reveal delay-2">
-                    <div class="team-image-wrapper">
-                        <div class="team-image">
-                            <img src="member3.jpg" alt="Team Member 3">
-                            <div class="team-overlay">
-                                <p class="team-quote">"Honoring our Filipino roots"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-name">Team Member 3</h3>
-                        <p class="team-role">Content Curator / Editor</p>
-                        <p class="team-school">Your School Name</p>
-                        <div class="team-contributions">
-                            <span class="contribution-tag">Editing</span>
-                            <span class="contribution-tag">Curation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="team-card scroll-reveal">
-                    <div class="team-image-wrapper">
-                        <div class="team-image">
-                            <img src="member4.jpg" alt="Team Member 4">
-                            <div class="team-overlay">
-                                <p class="team-quote">"Learning through cultural exploration"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-name">Team Member 4</h3>
-                        <p class="team-role">Researcher / Multimedia</p>
-                        <p class="team-school">Your School Name</p>
-                        <div class="team-contributions">
-                            <span class="contribution-tag">Video Production</span>
-                            <span class="contribution-tag">Graphics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div class="team-card scroll-reveal delay-1">
-                    <div class="team-image-wrapper">
-                        <div class="team-image">
-                            <img src="member5.jpg" alt="Team Member 5">
-                            <div class="team-overlay">
-                                <p class="team-quote">"Bringing GAMABA to the digital age"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-name">Team Member 5</h3>
-                        <p class="team-role">Documentation / Quality Assurance</p>
-                        <p class="team-school">Your School Name</p>
-                        <div class="team-contributions">
-                            <span class="contribution-tag">Documentation</span>
-                            <span class="contribution-tag">Testing</span>
-                        </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 1</h3>
+                    <p class="team-role">Project Leader</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Leadership</span>
+                        <span class="contribution-tag">Research</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Team Member 2 -->
+            <div class="team-card scroll-reveal delay-1">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member2.jpg" alt="Team Member 2">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Connecting heritage with technology"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 2</h3>
+                    <p class="team-role">Web Developer</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Coding</span>
+                        <span class="contribution-tag">Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card scroll-reveal delay-2">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member3.jpg" alt="Team Member 3">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Honoring our Filipino roots"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 3</h3>
+                    <p class="team-role">Content Writer</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Writing</span>
+                        <span class="contribution-tag">Editing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-card scroll-reveal">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member4.jpg" alt="Team Member 4">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Learning through cultural exploration"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 4</h3>
+                    <p class="team-role">Researcher</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Research</span>
+                        <span class="contribution-tag">Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="team-card scroll-reveal delay-1">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member5.jpg" alt="Team Member 5">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Bringing GAMABA to the digital age"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 5</h3>
+                    <p class="team-role">Multimedia Designer</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Graphics</span>
+                        <span class="contribution-tag">Video</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="team-card scroll-reveal delay-2">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member6.jpg" alt="Team Member 6">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Documenting our cultural heritage"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 6</h3>
+                    <p class="team-role">Documentation Lead</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Documentation</span>
+                        <span class="contribution-tag">Testing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 7 -->
+            <div class="team-card scroll-reveal">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member7.jpg" alt="Team Member 7">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Creativity meets tradition"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 7</h3>
+                    <p class="team-role">Creative Director</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Design</span>
+                        <span class="contribution-tag">Layout</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 8 -->
+            <div class="team-card scroll-reveal delay-1">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member8.jpg" alt="Team Member 8">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Bridging past and present"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 8</h3>
+                    <p class="team-role">Content Curator</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Curation</span>
+                        <span class="contribution-tag">Proofreading</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 9 -->
+            <div class="team-card scroll-reveal delay-2">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member9.jpg" alt="Team Member 9">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Every detail matters"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 9</h3>
+                    <p class="team-role">Quality Assurance</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Testing</span>
+                        <span class="contribution-tag">Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 10 -->
+            <div class="team-card scroll-reveal">
+                <div class="team-image-wrapper">
+                    <div class="team-image">
+                        <img src="member10.jpg" alt="Team Member 10">
+                        <div class="team-overlay">
+                            <p class="team-quote">"Collaboration creates excellence"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Member Name 10</h3>
+                    <p class="team-role">Project Coordinator</p>
+                    <p class="team-school">Your School Name</p>
+                    <div class="team-contributions">
+                        <span class="contribution-tag">Coordination</span>
+                        <span class="contribution-tag">Planning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
             
             <div class="team-statement scroll-reveal">
                 <blockquote>
