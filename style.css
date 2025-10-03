@@ -1128,11 +1128,7 @@ body {
         font-size: 1.1rem;
     }
     
-    .nav-menu {
-        flex-direction: column;
-        gap: 1rem;
-        display: none;
-    }
+    /* DON'T hide nav-menu here - let the hamburger styles handle it */
     
     .section-title {
         font-size: 2rem;
