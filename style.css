@@ -139,6 +139,111 @@ body {
 }
 
 /* ========================================
+   HAMBURGER MENU (Mobile/Tablet Only)
+======================================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11px);
+}
+
+/* Mobile/Tablet Navigation */
+@media (max-width: 1024px) {
+    .nav-container {
+        justify-content: space-between;
+    }
+    
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-brown) 100%);
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 0;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+        transition: right 0.4s ease;
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(197, 165, 114, 0.2);
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link:hover {
+        background: rgba(197, 165, 114, 0.1);
+    }
+}
+
+/* Desktop - Force horizontal menu */
+@media (min-width: 1025px) {
+    .hamburger {
+        display: none !important;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+/* ========================================
    HERO SECTION
 ======================================== */
 .hero {
@@ -191,13 +296,15 @@ body {
 }
 
 .hero-title {
-    font-family: 'Cinzel', serif;  /* ✅ Already Cinzel, but explicit now */
+    font-family: 'Cinzel', serif;
     font-size: 7rem;
     font-weight: 400;
-    letter-spacing: 25px;  /* Increased for dramatic effect */
+    letter-spacing: 28px;
     margin-bottom: 1rem;
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     animation: fadeInUp 1s ease-out;
+    text-align: center;
+    padding-left: 28px; /* Compensates for letter-spacing */
 }
 .hero-subtitle {
     font-family: 'Cinzel', serif;  /* ✅ Using Cinzel for subtitle too */
