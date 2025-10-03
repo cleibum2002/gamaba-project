@@ -173,6 +173,12 @@ body {
     transform: rotate(-45deg) translateY(-11px);
 }
 
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+}
+
 /* Mobile/Tablet Navigation */
 @media (max-width: 1024px) {
     .nav-container {
