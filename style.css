@@ -118,9 +118,11 @@ body {
     font-weight: 700;
     color: var(--gold);
     letter-spacing: 5px;
-    display: flex; 
-    align-items: center;    
-    gap: 15px;  
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none; /* ← ADD THIS */
+    cursor: pointer; /* ← ADD THIS */
 }
 
 .nav-logo-img {
